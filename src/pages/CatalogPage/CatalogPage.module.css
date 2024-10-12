@@ -1,0 +1,8 @@
+.catalogBox {
+  display: flex;
+  gap: 64px;
+}
+.filterBox {
+  display: flex;
+  flex-direction: column;
+}

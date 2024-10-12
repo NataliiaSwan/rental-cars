@@ -1,0 +1,50 @@
+.container {
+  width: 100%;
+}
+.hero {
+  background-image: image-set(
+    url(../../assets/img/hero_image_1x.webp.jpg) 1x,
+    url(../../assets/img/hero_image_2x.webp.jpg) 2x
+  );
+  background-size: cover; /* або contain, в залежності від потреб */
+
+  height: 100vh; /* Встановіть висоту, щоб фон був видимим */
+  width: 100%; /* Встановіть ширину */
+  display: flex;
+}
+.homecontent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 64px;
+}
+
+.homeTitle {
+  font-size: 48px;
+  color: #f7f7f7;
+  margin-bottom: 16px;
+}
+
+.homeParagraph {
+  font-size: 24px;
+  line-height: 1.3em;
+  color: #f7f7f7;
+  margin-bottom: 40px;
+}
+.homeButton {
+  display: inline-block;
+  padding: 16px 49px;
+  background-color: #e44848;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 200px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+
+.homeButton:hover {
+  background-color: #d84343;
+}

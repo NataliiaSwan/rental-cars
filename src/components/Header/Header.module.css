@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #f2f4f7;
+  padding: 24px 64px;
+}
+.logocontainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 450px;
+}
+
+.navlinks {
+  display: flex;
+  gap: 32px;
+}
+
+.navlinks li a {
+  color: #101828;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.navlinks li:first-child a:hover {
+  color: #d84343;
+}
