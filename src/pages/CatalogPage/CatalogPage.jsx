@@ -25,6 +25,7 @@ const CatalogPage = () => {
           <Filters />
         </div>
         <CamperList campers={campers} status={status} />
+        <button onClick={() => navigate('/catalog/:id')}>Show more</button>
       </div>
     </div>
   );

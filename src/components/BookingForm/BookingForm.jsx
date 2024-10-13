@@ -37,34 +37,50 @@ const BookingForm = () => {
         onSubmit={handleSubmit}
       >
         <Form>
-          {/* Name */}
           <div className={css.formGroup}>
-            <label htmlFor="name">Name*</label>
-            <Field
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-            />
-            <ErrorMessage name="name" component="div" className={css.error} />
-          </div>
-
-          {/* Email */}
-          <div className={css.formGroup}>
-            <label htmlFor="email">Email*</label>
             <Field
               type="email"
               id="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder="Name*"
+              className={css.inputField}
             />
             <ErrorMessage name="email" component="div" className={css.error} />
           </div>
 
-          {/* Booking Date */}
           <div className={css.formGroup}>
-            <label htmlFor="bookingDate">Booking date*</label>
-            <Field type="date" id="bookingDate" name="bookingDate" />
+            <Field
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email*"
+              className={css.inputField}
+            />
+            <ErrorMessage name="email" component="div" className={css.error} />
+          </div>
+
+          <div className={css.formGroup}>
+            {/* <Field
+              type="date"
+              id="bookingDate"
+              name="bookingDate"
+              placeholder="Booking date*"
+            />
+
+            <ErrorMessage
+              name="bookingDate"
+              component="div"
+              className={css.error}
+            /> */}
+            <label htmlFor="bookingDate" className={css.label}>
+              Booking date*
+            </label>
+            <Field
+              type="date"
+              id="bookingDate"
+              name="bookingDate"
+              className={css.inputField}
+            />
             <ErrorMessage
               name="bookingDate"
               component="div"
@@ -72,14 +88,12 @@ const BookingForm = () => {
             />
           </div>
 
-          {/* Comment */}
           <div className={css.formGroup}>
-            <label htmlFor="comment">Comment</label>
             <Field
               as="textarea"
               id="comment"
               name="comment"
-              placeholder="Your comment here..."
+              placeholder="Comment"
             />
             <ErrorMessage
               name="comment"
@@ -88,7 +102,6 @@ const BookingForm = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <button type="submit" className={css.submitButton}>
             Send
           </button>

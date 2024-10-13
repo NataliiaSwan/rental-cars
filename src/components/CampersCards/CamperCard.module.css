@@ -69,3 +69,16 @@ h2 {
   align-items: center;
   margin-bottom: 8px;
 }
+.categoriesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px; /* Відстань між кнопками */
+}
+.iconStar {
+  fill: #f2f4f7;
+  width: 16px;
+  height: 16px;
+}
+.iconStar:hover {
+  fill: #ffc531;
+}

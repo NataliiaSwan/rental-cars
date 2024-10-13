@@ -1,29 +1,39 @@
 import React from 'react';
 import css from './Reviews.module.css';
 
-const Reviews = () => {
+const Reviews = ({ reviews }) => {
+  const reviewList = reviews || [];
+
   return (
     <div className={css.reviewsContainer}>
-      <h2>User Reviews</h2>
-      {/* Відгук від Alice */}
-      <div className={css.review}>
-        <h3>Alice</h3>
-        <p className={css.comment}>
-          The Mavericks panel truck was a perfect choice for my solo road trip.
-          Compact, easy to drive, and had all the essentials. The kitchen
-          facilities were sufficient, and the overall experience was fantastic.
-        </p>
-      </div>
-
-      {/* Відгук від Bob */}
-      <div className={css.review}>
-        <h3>Bob</h3>
-        <p className={css.comment}>
-          A decent option for solo travel. The Mavericks provided a comfortable
-          stay, but the lack of bathroom facilities was a drawback. Good for
-          short trips where simplicity is preferred.
-        </p>
-      </div>
+      <h2>Reviews</h2>
+      {reviewList.length > 0 ? (
+        reviewList.map((review, index) => (
+          <div key={index} className={css.review}>
+            <div className={css.reviewHeader}>
+              <span className={css.reviewerName}>{review.reviewer_name}</span>
+              <span className={css.reviewerRating}>
+                {/* Відображення зірок */}
+                {Array.from({ length: 5 }, (_, i) => (
+                  <svg key={i} className={css.iconStar} width="16" height="16">
+                    {i < review.reviewer_rating ? (
+                      <use href="src/assets/icons/symbol-defs.svg#icon-star-full" />
+                    ) : (
+                      <use href="src/assets/icons/symbol-defs.svg#icon-star-empty" />
+                    )}
+                  </svg>
+                ))}
+                <span className={css.ratingValue}>
+                  {review.reviewer_rating}
+                </span>
+              </span>
+            </div>
+            <p className={css.reviewComment}>{review.comment}</p>
+          </div>
+        ))
+      ) : (
+        <p>There are no reviews for this camper</p>
+      )}
     </div>
   );
 };

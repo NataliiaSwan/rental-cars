@@ -1,0 +1,84 @@
+.camperDetails {
+  padding: 48px 64px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3em;
+  color: #101828;
+  margin-bottom: 8px;
+}
+
+.image {
+  width: 292px;
+  height: 312px;
+  border-radius: 10px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3em;
+  color: #101828;
+  margin-left: auto;
+  margin-bottom: 28px;
+}
+
+.rating,
+.location,
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #101828;
+}
+.location {
+  margin-bottom: 16px;
+}
+.ratingLocation {
+  display: flex;
+  gap: 16px;
+}
+
+.description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #475467;
+  margin-bottom: 60px;
+}
+.gallery {
+  display: flex; /* Використання Flexbox для вирівнювання */
+  flex-wrap: wrap; /* Дозволяє зображенням переходити на новий рядок */
+  justify-content: space-between; /* Вирівнювання зображень з однаковими проміжками */
+  margin: 20px 0; /* Відступи з верхньої та нижньої частини */
+  width: 1312px;
+}
+
+/* Стилі для зображень */
+.image {
+  height: 312px; /* Висота зображення */
+  object-fit: cover; /* Зберігає пропорції зображення, заповнюючи область */
+  border-radius: 10px; /* Закруглені краї зображень */
+  margin-bottom: 28px; /* Відступ знизу для кожного зображення */
+}
+.iconStar {
+  fill: #f2f4f7;
+  width: 16px;
+  height: 16px;
+}
+.iconStar:hover {
+  fill: #ffc531;
+}
+.icon {
+  fill: #101828;
+  width: 20px;
+  height: 20px;
+}
+.featursForm {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
