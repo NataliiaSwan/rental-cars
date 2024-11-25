@@ -1,4 +1,4 @@
-.featuresContainer {
+/* .featuresContainer {
   padding-bottom: 80px;
 }
 
@@ -10,15 +10,15 @@
 }
 .navigation {
   display: flex;
-  gap: 20px; /* Відступ між елементами */
-  align-items: center; /* Вирівнювання по вертикалі */
+  gap: 20px;
+  align-items: center;
 }
 
 .link {
   cursor: pointer;
-  color: #007bff; /* Зміна кольору тексту, можна змінити на потрібний */
-  text-decoration: none; /* Забрати підкреслення */
-  font-weight: bold; /* Жирний текст */
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2em;
@@ -36,12 +36,12 @@
   width: 100%;
 }
 
-/* .title {
+.title {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2em;
   color: #101828;
-} */
+}
 
 .categories {
   display: flex;
@@ -92,3 +92,8 @@
   border: 1px solid #dadde1;
   margin: 24px 0;
 }
+.filterWrapper {
+  gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+} */

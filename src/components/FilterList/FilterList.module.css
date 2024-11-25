@@ -1,0 +1,42 @@
+.filterDiv {
+  width: 360px;
+}
+.label {
+  display: flex;
+  color: var(--Gray, #6c717b);
+  margin-bottom: 8px;
+}
+.location {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.input {
+  width: 360px;
+  height: 56px;
+  padding: 18px 18px 18px 40px;
+  color: var(--Main, #101828);
+  border-radius: 12px;
+  border: none;
+  background: var(--Inputs, #f7f7f7);
+}
+.title {
+  color: var(--Text, #475467);
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+.divider {
+  width: 360px;
+  height: 0px;
+  margin: 0;
+  margin-bottom: 24px;
+  stroke-width: 1px;
+  stroke: var(--Gray-light, #dadde1);
+}

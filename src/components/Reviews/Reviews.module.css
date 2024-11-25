@@ -1,3 +1,36 @@
+/* .reviewsContainer {
+  margin-top: 20px;
+}
+
+.review {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviewerName {
+  font-weight: bold;
+}
+
+.reviewerRating {
+  display: flex;
+  align-items: center;
+}
+
+.ratingValue {
+  margin-left: 5px;
+}
+
+.reviewComment {
+  margin-top: 10px;
+} */
 .reviewsContainer {
   margin-top: 20px;
 }

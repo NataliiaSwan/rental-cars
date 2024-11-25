@@ -1,78 +1,4 @@
 /* .formContainer {
-  max-width: 641px;
-
-  border: 1px solid #dadde1;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  padding: 44px 57px;
-}
-
-.formTitle {
-  text-align: left;
-  margin-bottom: 8px;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.2px;
-}
-
-.formText {
-  text-align: center;
-  margin-bottom: 24px;
-  color: #6c717b;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5em;
-  text-align: left;
-}
-
-.formGroup {
-  margin-bottom: 20px;
-}
-
-input,
-textarea {
-  padding: 18px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 527px;
-  height: 60px;
-
-  gap: 10px;
-  border-radius: 12px;
-
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
-}
-
-textarea {
-  resize: none;
-  height: 100px;
-}
-
-.error {
-  color: red;
-  font-size: 12px;
-}
-
-.submitButton {
-  display: inline-block;
-  padding: 16px 49px;
-  background-color: #e44848;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  border-radius: 200px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5em;
-}
-
-.submitButton:hover {
-  background-color: #d84343;
-} */
-.formContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -156,4 +82,4 @@ textarea:focus {
   color: red;
   font-size: 14px;
   margin-top: 5px;
-}
+} */

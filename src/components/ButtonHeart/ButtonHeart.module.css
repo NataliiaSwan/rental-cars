@@ -1,0 +1,13 @@
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.favorite {
+  fill: #e44848;
+}
+
+.button {
+  background-color: inherit;
+  border: none;
+}

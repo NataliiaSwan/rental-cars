@@ -1,34 +1,83 @@
-import React, { useEffect } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Filters from '../../components/Filters/Filters';
-import CamperList from '../../components/CamperList/CamperList';
-import { fetchCampers } from '../../redux/campers/CampersSlice.js';
-import Header from '../../components/Header/Header.jsx';
+import { useSearchParams } from 'react-router-dom';
+import CampersList from '../../components/CamperList/CamperList.jsx';
+import FilterList from '../../components/FilterList/FilterList.jsx';
+import Loader from '../../components/Loader/Loader.jsx';
+import ButtonLoadMore from '../../components/ButtonLoadMore/ButtonLoadMore.jsx';
+import { getAllCampers } from '../../redux/campers/operations.js';
+import { resetItems } from '../../redux/campers/slice.js';
+import {
+  selectIsError,
+  selectIsLoading,
+  selectNotFound,
+  selectShownMoreBtn,
+} from '../../redux/campers/selectors.js';
 import css from './CatalogPage.module.css';
-import LocationInput from '../../components/LocationInput/LocationInput.jsx';
+import NotFound from '../../pages/NotFound/NotFound.jsx';
 
-const CatalogPage = () => {
+function CatalogPage() {
+  const [page, setPage] = useState(1);
+
+  const isLoading = useSelector(selectIsLoading);
+  const notFound = useSelector(selectNotFound);
+  const isError = useSelector(selectIsError);
+  const shownMoreBtn = useSelector(selectShownMoreBtn);
+
+  const [params] = useSearchParams();
+
+  const memoizedParamObject = useMemo(() => {
+    const paramObject = {};
+
+    const searchParams = [
+      'transmission',
+      'engine',
+      'form',
+      'bathroom',
+      'kitchen',
+      'TV',
+      'AC',
+      'location',
+      'radio',
+    ];
+
+    searchParams.forEach((item) => {
+      const paramValue = params.get(item);
+      if (paramValue) {
+        paramObject[item] = paramValue;
+      }
+    });
+
+    return paramObject;
+  }, [params]);
+
   const dispatch = useDispatch();
-  const campers = useSelector((state) => state.campers.items);
-  const status = useSelector((state) => state.campers.status);
 
   useEffect(() => {
-    dispatch(fetchCampers());
-  }, [dispatch]);
+    dispatch(getAllCampers({ page, ...memoizedParamObject }));
+  }, [dispatch, page, memoizedParamObject]);
+
+  const handleLoadMore = () => {
+    setPage(page + 1);
+  };
+
+  const onSearch = () => {
+    dispatch(resetItems());
+    setPage(1);
+  };
 
   return (
-    <div className={css.catalogPageContainer}>
-      <Header />
-      <div className={css.catalogBox}>
-        <div className={css.filterBox}>
-          <LocationInput />
-          <Filters />
-        </div>
-        <CamperList campers={campers} status={status} />
-        <button onClick={() => navigate('/catalog/:id')}>Show more</button>
-      </div>
+    <div className={css.catalogPage}>
+      <FilterList onSearch={onSearch} />
+      {!isError && !notFound && <CampersList handleLoadMore={handleLoadMore} />}
+      {!isLoading && shownMoreBtn && (
+        <ButtonLoadMore onClick={handleLoadMore} />
+      )}
+      {isLoading && <Loader />}
+      {notFound && !isLoading && <NotFound />}
+      {isError && !isLoading && <p>An error occurred !</p>}
     </div>
   );
-};
+}
 
 export default CatalogPage;

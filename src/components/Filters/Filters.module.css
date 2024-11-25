@@ -9,96 +9,17 @@
   line-height: 1.5em;
   margin-bottom: 32px;
 }
+
 .optionTitle {
   font-size: 20px;
   font-weight: 600;
   line-height: 1.2em;
-  margin-bottom: 48px;
 }
 
 .optionsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
-  gap: 12px;
-  width: 360px;
-}
-
-.option {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 112px;
-  height: 112px;
-  border: 1px solid #dadde1;
-  border-radius: 12px;
-  background-color: #fff;
-  padding: 16px 40px;
-  gap: 8px;
-}
-
-.option label {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5em;
-  color: #101828;
-}
-
-.icon {
-  width: 32px;
-  height: 32px;
-}
-.searchButton {
-  display: inline-block;
-  padding: 16px 49px;
-  background-color: #e44848;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  border-radius: 200px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5em;
-}
-
-.searchButton:hover {
-  background-color: #d84343;
-}
-.optionsGrid {
-  margin: 40px;
-}
-.optionsGrid:first-child {
-  margin: 32px;
-}
-
-  .separator {
-    border: none; 
-    border-top: 1px solid #dadde1;
-    margin: 24px; 
-    width: 360px; 
-  }  */
-
-.filterContainer {
-  width: 360px;
-  margin-left: 64px;
-}
-
-.filterTitle {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5em;
-  margin-bottom: 32px;
-}
-
-.optionTitle {
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.2em;
-}
-
-.optionsGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Три стовпці */
-  gap: 12px; /* Відстань між елементами */
+  gap: 12px; 
 
   width: 360px;
 }
@@ -151,8 +72,63 @@
 }
 
 .separator {
-  border: none; /* Якщо використовуєте <hr> */
+  border: none; 
   border-top: 1px solid #dadde1;
-  margin: 24px 0; /* Відступи згори і знизу для простору */
-  width: 100%; /* Щоб розтягнути на всю ширину контейнера */
+  margin: 24px 0; 
+  width: 100%; 
+} */
+
+.options {
+  row-gap: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.box {
+  width: 112px;
+  height: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid var(--Gray-light, #dadde1);
+  mix-blend-mode: multiply;
+}
+.box:hover {
+  border: 1px solid var(--Button, #e44848);
+}
+.labelWrapper {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.label,
+.subLabel {
+  color: var(--Main, #101828);
+  text-align: center;
+
+  font-weight: 500;
+  letter-spacing: -0.08px;
+}
+
+.hiddenCheckbox {
+  display: none;
+}
+
+.subOptions {
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.subOption {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }

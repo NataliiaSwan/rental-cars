@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   background-color: var(--white);
@@ -126,3 +126,70 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  width: 1440px;
+  margin: auto;
+  text-overflow: ellipsis;
+  color: var(--Text, #475467);
+  background: var(--White, #fff);
+  /* margin: 0; */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --Text: #475467;
+  --Inputs: #f7f7f7;
+  --Button: #e44848;
+  --Button-Hover: #d84343;
+  --White: #fff;
+  --Main: #101828;
+  --Badges: #f2f4f7;
+  --Gray-light: #dadde1;
+  --Gray: #6c717b;
+}
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+  padding-right: 64px;
+  padding-left: 64px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+p:last-child {
+  margin-bottom: 0;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+input {
+  font-family: inherit;
+}
+button {
+  font-family: inherit;
+  cursor: pointer;
+}

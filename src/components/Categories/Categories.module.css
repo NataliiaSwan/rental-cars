@@ -1,4 +1,4 @@
-.categoriesContainer {
+/* .categoriesContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -19,4 +19,27 @@
 .categoryButton:hover {
   background-color: #e44848;
   color: #fff;
+} */
+
+.category {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 12px 18px;
+  align-items: center;
+
+  border-radius: 100px;
+  background: var(--Badges, #f2f4f7);
+  mix-blend-mode: multiply;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+.text {
+  color: var(--Main, #101828);
+  text-align: center;
+
+  font-weight: 500;
+  line-height: 24px;
 }

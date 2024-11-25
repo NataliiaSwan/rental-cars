@@ -1,55 +1,37 @@
-import React from 'react';
-import css from './Features.module.css';
-// import Reviews from '../../components/Reviews/Reviews';
+// import Categories from '../../components/Features/Features.jsx';
+// import css from './Features.module.css';
 
-const Features = () => {
-  const categories = ['Automatic', 'AC', 'Petrol', 'Kitchen', 'Radio'];
+// function Features({ camper }) {
+//   // Перевірка, чи визначений camper
+//   if (!camper) {
+//     return <p>No data available</p>; // Можна додати інформацію про те, що дані відсутні
+//   }
 
-  const vehicleDetails = {
-    length: '5.4 m',
-    width: '2.01 m',
-    height: '2.05 m',
-    tank: '132 L',
-    consumption: '12.4 L/100km',
-  };
-
-  return (
-    <div className={css.featuresContainer}>
-      <div className={css.navigation}>
-        <h2 className={css.link}>Features</h2>
-        <h2 className={css.link}>Reviews</h2>
-      </div>
-      <hr className={css.thinLine} />
-      <div className={css.featureBox}>
-        <div className={css.categories}>
-          {categories.map((category, index) => (
-            <span key={index} className={css.category}>
-              {category}
-            </span>
-          ))}
-        </div>
-        <h2 className={css.detailsTitle}>Vehicle Details</h2>
-        <hr className={css.line} />
-        <ul className={css.detailsList}>
-          <li>
-            <strong>Length:</strong> {vehicleDetails.length}
-          </li>
-          <li>
-            <strong>Width:</strong> {vehicleDetails.width}
-          </li>
-          <li>
-            <strong>Height:</strong> {vehicleDetails.height}
-          </li>
-          <li>
-            <strong>Tank:</strong> {vehicleDetails.tank}
-          </li>
-          <li>
-            <strong>Consumption:</strong> {vehicleDetails.consumption}
-          </li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-export default Features;
+//   return (
+//     <div className={css.filterWrapper}>
+//       {camper.transmission && (
+//         <Categories
+//           iconId="icon-transmission"
+//           text={`${
+//             camper.transmission.charAt(0).toUpperCase() +
+//             camper.transmission.slice(1)
+//           }`}
+//         />
+//       )}
+//       {camper.engine && (
+//         <Categories
+//           iconId="icon-engine"
+//           text={`${
+//             camper.engine.charAt(0).toUpperCase() + camper.engine.slice(1)
+//           }`}
+//         />
+//       )}
+//       {camper.kitchen && <Categories iconId="icon-kitchen" text="Kitchen" />}
+//       {camper.AC && <Categories iconId="icon-ac" text="AC" />}
+//       {camper.TV && <Categories iconId="icon-tv" text="TV" />}
+//       {camper.bathroom && <Categories iconId="icon-bathroom" text="Bathroom" />}
+//       {camper.radio && <Categories iconId="icon-radio" text="Radio" />}
+//     </div>
+//   );
+// }
+// export default Features;

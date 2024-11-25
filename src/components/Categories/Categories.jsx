@@ -1,16 +1,15 @@
 import React from 'react';
 import css from './Categories.module.css';
 
-const Categories = ({ categories }) => {
+function Categories({ iconId, text }) {
   return (
-    <div className={css.categoriesContainer}>
-      {categories.map((category, index) => (
-        <button key={index} className={css.categoryButton}>
-          {category}
-        </button>
-      ))}
+    <div className={css.category}>
+      <svg className={css.icon}>
+        <use href={`src/assets/icons/symbol-defs.svg#${iconId}`}></use>
+      </svg>
+      <p className={css.text}>{text}</p>
     </div>
   );
-};
+}
 
 export default Categories;

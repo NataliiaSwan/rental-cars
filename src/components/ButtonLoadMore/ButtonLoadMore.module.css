@@ -1,0 +1,22 @@
+.button {
+  display: inline-flex;
+  padding: 16px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 200px;
+  border: 1px solid var(--Gray-light, #dadde1);
+
+  color: var(--Main, #101828);
+
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.08px;
+}
+.button:hover {
+  border: 1px solid var(--Button-Hover, #d84343);
+}

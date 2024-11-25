@@ -1,6 +1,13 @@
 import React from 'react';
 import css from './Header.module.css';
-import logo from '../../assets/img/Logo.svg';
+import logo from '../../assets/img/logo.svg';
+import { NavLink } from 'react-router-dom'; // використовуємо NavLink для автоматичного додавання isActive
+import clsx from 'clsx';
+
+// Функція для умовного додавання класу
+const makeLinksClass = ({ isActive }) => {
+  return clsx(css.link, isActive && css.isActive); // повертає активний клас, якщо isActive true
+};
 
 const Header = () => {
   return (
@@ -11,10 +18,14 @@ const Header = () => {
       <nav className={css.navbar}>
         <ul className={css.navlinks}>
           <li>
-            <a href="/">Home</a>
+            <NavLink to="/" className={makeLinksClass}>
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href="/catalog">Catalog</a>
+            <NavLink to="/catalog" className={makeLinksClass}>
+              Catalog
+            </NavLink>
           </li>
         </ul>
       </nav>
