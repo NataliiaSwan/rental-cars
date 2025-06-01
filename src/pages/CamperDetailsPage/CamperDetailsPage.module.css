@@ -76,9 +76,21 @@ h2 {
   width: 20px;
   height: 20px;
 }
-.featursForm {
+.featuresForm {
   display: flex;
   gap: 40px;
   align-items: center;
   justify-content: center;
+}
+.titleFeatures,
+.titleReviews {
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2em;
+  color: #101828;
+}
+.titleFeaturesReviews {
+  display: flex;
+  gap: 40px;
 }

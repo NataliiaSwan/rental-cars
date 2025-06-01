@@ -15,14 +15,29 @@ export const getAllCampers = createAsyncThunk(
   }
 );
 
+// export const getCamperById = createAsyncThunk(
+//   'campers/getOne',
+//   async (camperId, thunkAPI) => {
+//     try {
+//       const response = await axios.get(`/campers/${camperId}`);
+//       return response.data;
+//     } catch (e) {
+//       return thunkAPI.rejectWithValue(e.message);
+//     }
+//   }
+// );
+
 export const getCamperById = createAsyncThunk(
   'campers/getOne',
-  async (campersId, thunkAPI) => {
+  async (camperId, thunkAPI) => {
     try {
-      const response = await axios.get(`/campers/${campersId}`);
+      const response = await axios.get(`/campers/${camperId}`);
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+      return thunkAPI.rejectWithValue({
+        message: e.message,
+        status: e.response?.status,
+      });
     }
   }
 );

@@ -37,6 +37,7 @@ const campersSlice = createSlice({
     builder
       .addCase(getAllCampers.pending, handlePending)
       .addCase(getAllCampers.fulfilled, (state, action) => {
+        // state.items = action.payload;
         state.isLoading = false;
         state.isError = null;
         const newItems = action.payload.items.filter(

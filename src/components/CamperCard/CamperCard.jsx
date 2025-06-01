@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './CamperCard.module.css';
 import FeaturesList from '../../components/FeaturesList/FeaturesList.jsx';
@@ -46,7 +45,6 @@ function CamperCard({ camper }) {
             </div>
           </div>
           <div className={css.ratingDiv}>
-            {/* Заміна ReviewLocation для рейтингу */}
             <div className={css.iconWrapper}>
               <svg className={css.iconStar}>
                 <use href="src/assets/icons/symbol-defs.svg#icon-star"></use>
@@ -56,7 +54,6 @@ function CamperCard({ camper }) {
               </p>
             </div>
 
-            {/* Заміна ReviewLocation для локації */}
             <div className={css.iconWrapper}>
               <svg className={css.iconMap}>
                 <use href="src/assets/icons/symbol-defs.svg#icon-map"></use>
