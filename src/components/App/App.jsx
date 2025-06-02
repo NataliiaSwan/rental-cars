@@ -24,6 +24,7 @@ function App() {
 
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/catalog/:id" element={<CamperDetailsPage />}>
+            <Route index element={<Features />} /> {/* За замовчуванням */}
             <Route path="features" element={<Features />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
