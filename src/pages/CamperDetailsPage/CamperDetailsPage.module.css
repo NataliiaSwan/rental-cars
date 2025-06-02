@@ -1,5 +1,7 @@
 .camperDetails {
   padding: 48px 64px;
+  max-width: 1312px;
+  width: 100%;
 }
 
 h2 {
@@ -80,7 +82,7 @@ h2 {
   display: flex;
   gap: 40px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .titleFeatures,
 .titleReviews {

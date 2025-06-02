@@ -1,5 +1,7 @@
-/* .featuresContainer {
+.featuresContainer {
   padding-bottom: 80px;
+  width: 100%;
+  max-width: 631px;
 }
 
 .featureBox {
@@ -96,4 +98,4 @@
   gap: 8px;
   display: flex;
   flex-wrap: wrap;
-} */
+}

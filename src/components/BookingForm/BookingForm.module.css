@@ -1,7 +1,9 @@
-/* .formContainer {
+.formContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 50%;
+  max-width: 641px;
 }
 .formGroup {
   display: flex;
@@ -82,4 +84,4 @@ textarea:focus {
   color: red;
   font-size: 14px;
   margin-top: 5px;
-} */
+}

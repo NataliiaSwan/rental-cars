@@ -1,6 +1,10 @@
+import { useOutletContext } from 'react-router-dom';
 import css from './Reviews.module.css';
 
-const Reviews = ({ reviews }) => {
+const Reviews = () => {
+  const camper = useOutletContext();
+  const reviews = camper?.reviews || [];
+
   return (
     <div className={css.reviewsContainer}>
       {reviews.length > 0 ? (
@@ -9,7 +13,6 @@ const Reviews = ({ reviews }) => {
             <div className={css.reviewHeader}>
               <span className={css.reviewerName}>{review.reviewer_name}</span>
               <span className={css.reviewerRating}>
-                {/* Відображення зірок */}
                 {Array.from({ length: 5 }, (_, i) => (
                   <svg key={i} className={css.iconStar} width="16" height="16">
                     <use href="src/assets/icons/symbol-defs.svg#icon-star"></use>
