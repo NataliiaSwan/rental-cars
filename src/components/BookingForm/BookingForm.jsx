@@ -60,25 +60,11 @@ const BookingForm = () => {
           </div>
 
           <div className={css.formGroup}>
-            {/* <Field
-              type="date"
-              id="bookingDate"
-              name="bookingDate"
-              placeholder="Booking date*"
-            />
-
-            <ErrorMessage
-              name="bookingDate"
-              component="div"
-              className={css.error}
-            /> */}
-            <label htmlFor="bookingDate" className={css.label}>
-              Booking date*
-            </label>
             <Field
-              type="date"
+              type="text"
               id="bookingDate"
               name="bookingDate"
+              placeholder="bookingDate*"
               className={css.inputField}
             />
             <ErrorMessage
