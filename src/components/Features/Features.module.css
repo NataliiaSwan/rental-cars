@@ -1,4 +1,4 @@
-.featuresContainer {
+/* .featuresContainer {
   padding-bottom: 80px;
   width: 100%;
   max-width: 631px;
@@ -98,4 +98,8 @@
   gap: 8px;
   display: flex;
   flex-wrap: wrap;
+} */
+.featuresContainer {
+  display: flex;
+  flex-direction: column;
 }

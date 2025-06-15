@@ -11,7 +11,7 @@ const CamperDetailsPage = lazy(() =>
 );
 
 import NotFound from '../../pages/NotFound/NotFound.jsx';
-import Features from '../Features/Features.jsx';
+import FeaturesRouteWrapper from '../../components/FeaturesRouteWrapper/FeaturesRouteWrapper.jsx';
 import Reviews from '../Reviews/Reviews.jsx';
 
 function App() {
@@ -24,8 +24,8 @@ function App() {
 
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/catalog/:id" element={<CamperDetailsPage />}>
-            <Route index element={<Features />} /> {/* За замовчуванням */}
-            <Route path="features" element={<Features />} />
+            <Route index element={<FeaturesRouteWrapper />} />
+            <Route path="features" element={<FeaturesRouteWrapper />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
           <Route path="*" element={<NotFound />} />
@@ -36,24 +36,3 @@ function App() {
 }
 
 export default App;
-
-// import { Route, Routes } from 'react-router-dom';
-// import HomePage from '../../pages/HomePage/HomePage.jsx';
-// import CatalogPage from '../../pages/CatalogPage/CatalogPage.jsx';
-// import CamperDetailsPage from '../../pages/CamperDetailsPage/CamperDetailsPage.jsx';
-// import Header from '../../components/Header/Header.jsx';
-
-// function App() {
-//   return (
-//     <>
-//       <Header />
-//       <Routes>
-//         <Route path="/" element={<HomePage />} />
-//         <Route path="/catalog" element={<CatalogPage />} />
-//         <Route path="/catalog/:id" element={<CamperDetailsPage />} />
-//       </Routes>
-//     </>
-//   );
-// }
-
-// export default App;

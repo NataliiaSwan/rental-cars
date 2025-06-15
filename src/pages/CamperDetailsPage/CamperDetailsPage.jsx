@@ -5,6 +5,7 @@ import { getCamperById as fetchCamperById } from '../../redux/campers/operations
 import css from './CamperDetailsPage.module.css';
 
 import BookingForm from '../../components/BookingForm/BookingForm.jsx';
+import Features from '../../components/Features/Features.jsx';
 
 const CamperDetailsPage = () => {
   const { id } = useParams();
@@ -78,6 +79,7 @@ const CamperDetailsPage = () => {
       <hr />
 
       <div className={css.featuresForm}>
+        <Features />
         <Outlet context={camper} />
         <BookingForm camper={camper} />
       </div>

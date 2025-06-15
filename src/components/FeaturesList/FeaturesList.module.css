@@ -101,4 +101,5 @@
   gap: 8px;
   display: flex;
   flex-wrap: wrap;
+  max-width: 631px;
 }
