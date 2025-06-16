@@ -21,6 +21,7 @@ function VehicleTypeFilters() {
                 href={`${sprite}#icon-${type.toLowerCase().replace(/ /g, '')}`}
               />
             </svg>
+
             <span>{type}</span>
           </label>
         </div>

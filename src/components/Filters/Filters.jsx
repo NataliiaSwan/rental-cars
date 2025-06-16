@@ -2,6 +2,7 @@ import { Field } from 'formik';
 import { useState } from 'react';
 import css from './Filters.module.css';
 import { equipmentOptions, iconMapping } from '../../contants/contants.js';
+import sprite from '../../assets/icons/symbol-defs.svg';
 
 function Filters() {
   const [expandedOptions, setExpandedOptions] = useState({});
@@ -35,7 +36,7 @@ function Filters() {
           >
             <svg height={32} width={32}>
               <use
-                href={`/src/assets/icons#icon-${
+                href={`${sprite}#icon-${
                   iconMapping[defaultText] || iconMapping[main]
                 }`}
               />

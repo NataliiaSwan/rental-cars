@@ -1,12 +1,10 @@
-import React from 'react';
 import css from './Header.module.css';
 import logo from '../../assets/img/logo.svg';
-import { NavLink } from 'react-router-dom'; // використовуємо NavLink для автоматичного додавання isActive
+import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 
-// Функція для умовного додавання класу
 const makeLinksClass = ({ isActive }) => {
-  return clsx(css.link, isActive && css.isActive); // повертає активний клас, якщо isActive true
+  return clsx(css.link, isActive && css.isActive);
 };
 
 const Header = () => {

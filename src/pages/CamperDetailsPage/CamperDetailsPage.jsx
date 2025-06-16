@@ -3,6 +3,7 @@ import { Outlet, useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCamperById as fetchCamperById } from '../../redux/campers/operations.js';
 import css from './CamperDetailsPage.module.css';
+import sprite from '../../assets/icons/symbol-defs.svg';
 
 import BookingForm from '../../components/BookingForm/BookingForm.jsx';
 import Features from '../../components/Features/Features.jsx';
@@ -33,11 +34,11 @@ const CamperDetailsPage = () => {
         <h2>{camper.name}</h2>
         <div className={css.ratingLocation}>
           <svg className={css.iconStar}>
-            <use href="/assets/icons/symbol-defs.svg#icon-star" />
+            <use href={`${sprite}#icon-star`} />
           </svg>
           <p className={css.rating}>Rating: {camper.rating}</p>
           <svg width="20" height="20">
-            <use href="/assets/icons/symbol-defs.svg#icon-map" />
+            <use href={`${sprite}#icon-map`} />
           </svg>
           <p className={css.location}>Location: {camper.location}</p>
         </div>

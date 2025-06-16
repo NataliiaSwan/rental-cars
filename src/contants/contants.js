@@ -1,8 +1,8 @@
 export const iconMapping = {
   Automatic: 'automatic',
-  // Manual: 'transmission',
-  // Diesel: 'engine',
-  // Petrol: 'engine',
+  Manual: 'transmission',
+  Diesel: 'engine',
+  Petrol: 'engine',
   AC: 'AC',
   Kitchen: 'kitchen',
   TV: 'TV',
